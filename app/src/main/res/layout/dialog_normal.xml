@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <!-- 自定义图标 -->
+    <ImageView
+        android:id="@+id/custom_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <!-- 警告图标 -->
+    <FrameLayout
+        android:id="@+id/warning_frame"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_circle_yellow_n" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/test"
+            android:scaleType="center"
+            android:src="@drawable/sign_warning_yellow" />
+    </FrameLayout>
+
+    <!-- 对话框标题 和图标 -->
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/dialog_title_style"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/dialog_default_title"
+        android:textSize="18sp" />
+
+    <!-- 对话框消息内容 -->
+    <LinearLayout
+        android:id="@+id/dialog_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_message"
+            style="@style/dialog_msg_style"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="this is a message"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+    <!-- 对话框确定/取消按钮 -->
+    <LinearLayout
+        android:id="@+id/dialog_btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/dialog_btn_line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/md_grey_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/dialog_neg_btn"
+                style="@style/dialog_button_style"
+                android:background="@drawable/sel_btn_rip_gray_left"
+                android:text="取消"
+                android:textColor="@color/md_light_blue_500"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/btn_line_verticle"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_500"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/dialog_posi_btn"
+                style="@style/dialog_button_style"
+                android:background="@drawable/sel_btn_rip_gray_right"
+                android:text="确定"
+                android:textColor="@color/md_light_blue_500" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

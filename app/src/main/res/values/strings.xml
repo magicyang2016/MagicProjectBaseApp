@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MagicProjectBaseApp</string>
+
+
+    <string name="oobe_serveraddr_title">服务器地址设置</string>
+    <string name="oobe_url_netpath">网络线路</string>
+    <string name="oobe_url_netpath1">线路1</string>
+    <string name="oobe_url_netpath2">线路2</string>
+    <string name="oobe_url_netpath3">管理网</string>
+    <string name="oobe_url_netpath4">生产网</string>
+    <string name="oobe_url_netpath5">金融网</string>
+    <string name="oobe_url_netpath6">综合网</string>
+    <string name="oobe_url_http">HTTP请求</string>
+    <string name="oobe_url_apk_down">apk下载</string>
+    <string name="oobe_url_audio_up">录音上传</string>
+    <string name="oobe_url_audio_down">录音下载</string>
+    <string name="oobe_url_audio_push">推送服务</string>
+    <string name="oobe_menu_save">保存</string>
+    <string name="test">测试</string>
+    <string name="dialog_default_title">Dialog默认标题（可替换）</string>
+
+    <string name="point">.</string>
+    <string name="colon">:</string>
+    <string name="slash">/</string>
+    <string name="limit_num_et">0123456789</string>
+
+    <string name="progress_dialog_outtime_msg">progress_dialog_outtime_msg（可替换）</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

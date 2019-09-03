@@ -1,0 +1,193 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="PopWindowAnimStyle">
+        <item name="android:windowShowAnimation">@anim/dialog_enter</item>
+        <!-- 指定显示的动画xml  -->
+        <item name="android:windowHideAnimation">@anim/dialog_exit</item>
+        <!-- 指定消失的动画xml  -->
+    </style>
+
+    <style name="AnimHorizontal" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_left_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_left_out</item>
+    </style>
+
+    <style name="AnimDown" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_out</item>
+    </style>
+
+    <!-- ToolBar主题样式.-->
+    <style name="toolbar_theme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <!--修改toolbar的Title(大标题)颜色-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!--修改toolbar的subtitle(小标题)颜色-->
+        <item name="subtitleTextColor">@color/white</item>
+        <!--修改toolbar的图标颜色.-->
+        <!--<item name="colorControlNormal">@color/white</item>-->
+    </style>
+    <!-- ToolBar菜单主题样式.-->
+    <style name="popup_theme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <!--设置背景-->
+        <item name="android:background">@color/colorPrimary</item>
+        <!--设置字体颜色-->
+        <item name="android:textColor">@color/md_black_1000</item>
+        <!--设置不覆盖锚点，不盖住toolbar-->
+        <item name="overlapAnchor">false</item>
+        <!--<item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.App</item>-->
+    </style>
+
+    <!--switch选择器样式-->
+    <style name="Tmkp2SwitchTheme">
+        <item name="colorControlActivated">@color/md_light_blue_500</item>
+        <item name="colorSwitchThumbNormal">@color/md_amber_500</item>
+        <item name="android:colorForeground">@color/md_amber_500</item>
+    </style>
+
+    <!--switch texton off 字体大小颜色-->
+    <style name="TmkpTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.Switch">
+        <item name="android:textSize">@dimen/text_10</item>
+        <item name="android:textColor">@color/md_green_900</item>
+    </style>
+
+    <!--单行EditText的样式-->
+    <style name="et_single_style" parent="Widget.AppCompat.EditText">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textColorHint">@color/md_blue_grey_100</item>
+    </style>
+
+    <!--对话框的各种样式-->
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/color_00000000</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+    <!-- 对话框创建时需要加载的样式 -->
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <!-- 去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 去除背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+    <!-- 对话框创建时需要加载的样式(不显示阴影) -->
+    <style name="DialogDim" parent="@android:style/Theme.Dialog">
+        <!-- 去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 去除背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 对话框动画样式 -->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/modal_in</item>
+        <item name="android:windowExitAnimation">@anim/modal_out</item>
+    </style>
+
+    <!-- 对话框动画样式样式2 -->
+    <style name="DialogAnimationSlidTop">
+        <item name="android:windowEnterAnimation">@anim/dialog_slid_open_top</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slid_close_top</item>
+    </style>
+    <!-- 对话框动画样式样式3 -->
+    <style name="DialogAnimationSlidBottom">
+        <item name="android:windowEnterAnimation">@anim/dialog_slid_open_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slid_close_bottom</item>
+    </style>
+    <!-- 对话框动画样式样式4 -->
+    <style name="DialogAnimationSlidRight">
+        <item name="android:windowEnterAnimation">@anim/dialog_slid_open_right</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slid_close_right</item>
+    </style>
+
+    <!-- 对话框确认或取消button样式 -->
+    <style name="dialog_button_style" parent="android:Widget.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:background">@drawable/sel_btn_rip_gray</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+    </style>
+
+    <style name="dialog_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/md_grey_800</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="dialog_msg_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/md_grey_400</item>
+        <item name="android:maxLines">12</item>
+    </style>
+
+    <!--switch选择器样式-->
+    <style name="TmkpSwitchTheme">
+        <!--设置为开启时track和thumb的颜色-->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <!--设置为关闭时thumb的颜色-->
+        <item name="colorSwitchThumbNormal">#FFF1F1F1</item>
+        <!--texton或textoff的颜色-->
+        <item name="android:colorForeground">#FF2F2F2F</item>
+    </style>
+
+    <!-- ToolBar的style样式.-->
+    <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--设置toolbar的最小高度.这样设置的意义,就是解决适配的问题,标准md高度.-->
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <!--Toolbar 的背景色设置在其 layout 中的 background 的属性中-->
+        <item name="android:background">@color/colorPrimary</item>
+        <!--设置沉浸式-->
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="basis_toolbar" parent="toolbar"/>
+
+
+</resources>

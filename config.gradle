@@ -1,0 +1,125 @@
+
+ext{
+    android = [
+               compileSdkVersion       : 28,
+               buildToolsVersion       : "28.0.3",
+               minSdkVersion           : 21,
+               targetSdkVersion        : 28,
+               versionCode             : 1,
+               versionName             : "1.0",   //必须是int或者float，否则影响线上升级
+    ]
+    version = [
+            //创建项目默认依赖 start
+            androidSupportSdkVersion                    : "28.0.0",
+            constraintLayoutVersion                     : "1.1.3",
+            junitVersion                                : "4.12",
+            runnerVersion                               : "1.0.2",
+            espressoVersion                             : "3.0.2",
+            //创建项目默认依赖 end
+
+
+//    *******网络访问**********start******
+            //20190510 github 最新版 rxjava2 必要
+            rxjava2Version                              : "2.2.8",
+            //20190510 github 最新版 rxandroid 必要rxandrroid依赖，切线程时需要用到
+            rxjava2RxandroidVersion                     : "2.1.1",
+            //20190510 github 最新版 retrofit2 必要retrofit依赖
+            retrofit2Version                            : "2.5.0",
+//            订阅生命周期
+            rxlifecycleVersion                          : "2.2.1",
+            // 必要依赖，和Rxjava结合必须用到，下面会提到
+            retrofit2AdapterRxjava2Version              : "2.3.0",
+            retrofit2ConverterGsonVersion               : "2.3.0",
+            //非必要依赖， log依赖，如果需要打印OkHttpLog需要添加
+            okhttp3LoggingVersion                       : "3.8.1",
+            //20190510 github 最新版 okhttp3
+            okhttp3Version                              : "3.14.1",
+//    *******网络访问**********start******
+            multidexVersion                             : "1.0.2",
+ //*******图片加载**********start******
+            //图片加载github 最新版
+            glideVersion                                : "4.9.0",
+//*******图片加载**********end******
+            //    日志打印github最新版
+            loggerVersion                               : "2.2.0",
+            //使用注解必须下面这两个
+            butterknifeVersion                          : "9.0.0",
+            //事件总线
+            eventbusVersion                             : "3.1.1",
+            //数据库框架
+            greendaoVersion                             : "3.2.2",
+            debugdbVersion                              : "1.0.6",
+//            阿里组件化路由
+            arouterApiVersion                           : "1.5.0",
+            arouterCompilerVersion                      : "1.2.2",
+            //权限框架
+            rxpermissionVersion                         : "0.10.2",
+
+            autosizeVersion                             : "1.1.2",
+            immersionbarVersion                         : "3.0.0-beta05",
+            timberVersion                               : "4.7.1",
+            toastyVersion                               : "1.4.2",
+            smartrefreshVersion                         : "1.1.0-alpha-28",
+            leakcanaryVersion                           : "1.6.1",
+//            硬盘缓存
+            disklrucacheVersion                         : "2.0.2",
+
+//            缓存框架
+            //权限框架
+//            aaaaaaVersion            : "4.8.0",
+
+    ]
+
+    dependencies = [
+                //创建项目默认依赖 start
+                "appcompat-v7"                : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
+                "support-v4"                  : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
+                "support-design"              : "com.android.support:design:${version["androidSupportSdkVersion"]}",
+
+                "constraint-layout"           : "com.android.support.constraint:constraint-layout:${version["constraintLayoutVersion"]}",
+                "junit"                       : "junit:junit:${version["junitVersion"]}",
+                "runner"                      : "com.android.support.test:runner:${version["runnerVersion"]}",
+                "espresso-core"               : "com.android.support.test.espresso:espresso-core:${version["espressoVersion"]}",
+                //创建项目默认依赖 end
+
+                "rxjava2"                     : "io.reactivex.rxjava2:rxjava:${version["rxjava2Version"]}",
+                "rxjava2Rxandroid"            : "io.reactivex.rxjava2:rxandroid:${version["rxjava2RxandroidVersion"]}",
+                "retrofit2"                   : "com.squareup.retrofit2:retrofit:${version["retrofit2Version"]}",
+                "retrofit2AdapterRxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofit2AdapterRxjava2Version"]}",
+                "retrofit2ConverterGson"      : "com.squareup.retrofit2:converter-gson:${version["retrofit2ConverterGsonVersion"]}",
+                "okhttp3Logging"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3LoggingVersion"]}",
+                "okhttp3"                     : "com.squareup.okhttp3:okhttp:${version["okhttp3Version"]}",
+                "multidex"                    : "com.android.support:multidex:${version["multidexVersion"]}",
+                "glide"                       : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+                "glideCompiler"               : "com.github.bumptech.glide:compiler:${version["glideVersion"]}",
+                "logger"                      : "com.orhanobut:logger:${version["loggerVersion"]}",
+                "butterknife"                 : "com.jakewharton:butterknife:${version["butterknifeVersion"]}",
+                "butterknifeCompiler"         : "com.jakewharton:butterknife-compiler:${version["butterknifeVersion"]}",
+                "eventbus"                    : "org.greenrobot:eventbus:${version["eventbusVersion"]}",
+                "greenDao"                    : "org.greenrobot:greendao:${version["greendaoVersion"]}",
+                "debugdb"                     : "com.amitshekhar.android:debug-db:${version["debugdbVersion"]}",
+                //路由
+                "arouter_api"                 : "com.alibaba:arouter-api:${version["arouterApiVersion"]}",
+                "arouter_compiler"            : "com.alibaba:arouter-compiler:${version["arouterCompilerVersion"]}",
+
+                "rxpermission"                : "com.github.tbruyelle:rxpermissions:${version["rxpermissionVersion"]}",
+
+                "autosize"                    : "me.jessyan:autosize:${version["autosizeVersion"]}",
+                "immersionbar"                : "com.gyf.immersionbar:immersionbar:${version["immersionbarVersion"]}",
+
+                "rxlifecycle"                 : "com.trello.rxlifecycle2:rxlifecycle:${version["rxlifecycleVersion"]}",
+                "rxlifecycle-components"      : "com.trello.rxlifecycle2:rxlifecycle-components:${version["rxlifecycleVersion"]}",
+                "rxlifecycle-android"         : "com.trello.rxlifecycle2:rxlifecycle-android:${version["rxlifecycleVersion"]}",
+                "timber"                      : "com.jakewharton.timber:timber:${version["timberVersion"]}",
+                "toasty"                      : "com.github.GrenderG:Toasty:${version["toastyVersion"]}",
+                "smartrefresh"                : "com.scwang.smartrefresh:SmartRefreshLayout:${version["smartrefreshVersion"]}",
+                "leakcanary"                  : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
+//                硬盘缓存
+                "disklrucache"                : "com.jakewharton:disklrucache:${version["disklrucacheVersion"]}",
+//                "aaa"                 : "aaa:${version["aaa"]}",
+
+//                "easypermissions"           : "pub.devrel:easypermissions:1.0.1",
+        ]
+
+
+}
